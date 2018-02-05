@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Rules>
+    <Rule id="livingSpace">
+        <Question>Do you live in a (house) or a (flat)?</Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="house"/>
+            </Selection>
+            <Selection value="false">
+                <SingleValue value="flat"/>
+            </Selection>
+        </Answer>
+    </Rule>
+
+    <Rule id="freetime">
+        <Question>Do you have a lot of freetime?(yes/no)</Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="yes"/>
+            </Selection>
+            <Selection value="false">
+                <SingleValue value="no"/>
+            </Selection>
+        </Answer>
+    </Rule>
+
+    <Rule id="money">
+        <Question>Does the cost of the animal matters?(yes/no)</Question>
+        <Answer>
+            <Selection value="true">
+                <MultipleValue value="yes"/>
+            </Selection>
+            <Selection value="false">
+                <MultipleValue value="no"/>
+            </Selection>
+        </Answer>
+    </Rule>
+
+        <Rule id="activeness">
+        <Question>Do you live an active life?(yes/no)</Question>
+        <Answer>
+            <Selection value="true">
+                <MultipleValue value="yes"/>
+            </Selection>
+            <Selection value="false">
+                <MultipleValue value="no"/>
+            </Selection>
+        </Answer>
+    </Rule>
+
+        <Rule id="cleaning">
+        <Question>Do you like cleaning?(yes/no)</Question>
+        <Answer>
+            <Selection value="true">
+                <MultipleValue value="yes"/>
+            </Selection>
+            <Selection value="false">
+                <MultipleValue value="no"/>
+            </Selection>
+        </Answer>
+    </Rule>
+</Rules>

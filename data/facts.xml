@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Facts>
+    <Fact id="lynx">
+        <Description value="Lynx"/>
+        <Evals>
+            <Eval id="livingSpace">true</Eval>
+            <Eval id="freeTime">true</Eval>
+            <Eval id="money">false</Eval>
+            <Eval id="activeness">true</Eval>
+            <Eval id="cleaning">true</Eval>
+        </Evals>
+    </Fact>
+
+    <Fact id="uvdog">
+        <Description value="UV Dog"/>
+        <Evals>
+            <Eval id="livingSpace">true</Eval>
+            <Eval id="freeTime">false</Eval>
+            <Eval id="money">true</Eval>
+            <Eval id="activeness">false</Eval>
+            <Eval id="cleaning">true</Eval>
+        </Evals>
+    </Fact>
+
+    <Fact id="iguana">
+        <Description value="Iguana"/>
+        <Evals>
+            <Eval id="livingSpace">false</Eval>
+            <Eval id="freeTime">false</Eval>
+            <Eval id="money">true</Eval>
+            <Eval id="activeness">false</Eval>
+            <Eval id="cleaning">false</Eval>
+        </Evals>
+    </Fact>
+
+    <Fact id="pikachu">
+        <Description value="Pikachu"/>
+        <Evals>
+            <Eval id="livingSpace">false</Eval>
+            <Eval id="freeTime">false</Eval>
+            <Eval id="money">false</Eval>
+            <Eval id="activeness">true</Eval>
+            <Eval id="cleaning">false</Eval>
+        </Evals>
+    </Fact>
+
+    <Fact id="penguin">
+        <Description value="Penguin"/>
+        <Evals>
+            <Eval id="livingSpace">false</Eval>
+            <Eval id="freeTime">true</Eval>
+            <Eval id="money">false</Eval>
+            <Eval id="activeness">false</Eval>
+            <Eval id="cleaning">true</Eval>
+        </Evals>
+    </Fact>
+
+        <Fact id="narwhal">
+        <Description value="Narwhal"/>
+        <Evals>
+            <Eval id="livingSpace">true</Eval>
+            <Eval id="freeTime">false</Eval>
+            <Eval id="money">false</Eval>
+            <Eval id="activeness">true</Eval>
+            <Eval id="cleaning">false</Eval>
+        </Evals>
+    </Fact>
+
+        <Fact id="lobster">
+        <Description value="Lobster"/>
+        <Evals>
+            <Eval id="livingSpace">false</Eval>
+            <Eval id="freeTime">false</Eval>
+            <Eval id="money">true</Eval>
+            <Eval id="activeness">false</Eval>
+            <Eval id="cleaning">false</Eval>
+        </Evals>
+    </Fact>
+
+        <Fact id="wolverine">
+        <Description value="Wolverine"/>
+        <Evals>
+            <Eval id="livingSpace">true</Eval>
+            <Eval id="freeTime">true</Eval>
+            <Eval id="money">true</Eval>
+            <Eval id="activeness">true</Eval>
+            <Eval id="cleaning">true</Eval>
+        </Evals>
+    </Fact>
+
+        <Fact id="ewok">
+        <Description value="Ewok"/>
+        <Evals>
+            <Eval id="livingSpace">false</Eval>
+            <Eval id="freeTime">true</Eval>
+            <Eval id="money">true</Eval>
+            <Eval id="activeness">true</Eval>
+            <Eval id="cleaning">true</Eval>
+        </Evals>
+    </Fact>
+</Facts>
