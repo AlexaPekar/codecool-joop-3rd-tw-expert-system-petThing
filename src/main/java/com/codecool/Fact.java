@@ -8,7 +8,7 @@ public class Fact {
     private String description;
     private Set<String> idSet;
     private boolean livingSpace;
-    private boolean freetime;
+    private boolean freeTime;
     private boolean money;
     private boolean activeness;
     private boolean cleaning;
@@ -25,8 +25,8 @@ public class Fact {
     public boolean getValueById(String id) {
         if (id.equalsIgnoreCase("livingSpace")) {
             return livingSpace;
-        } if (id.equalsIgnoreCase("freetime")) {
-            return freetime;
+        } if (id.equalsIgnoreCase("freeTime")) {
+            return freeTime;
         } if (id.equalsIgnoreCase("money")) {
             return money;
         } if (id.equalsIgnoreCase("activeness")) {
@@ -40,8 +40,8 @@ public class Fact {
     public void setFactValueById(String id, boolean value) {
         if (id.equalsIgnoreCase("livingSpace")) {
             livingSpace = value;
-        } if (id.equalsIgnoreCase("freetime")) {
-            freetime = value;
+        } if (id.equalsIgnoreCase("freeTime")) {
+            freeTime = value;
         } if (id.equalsIgnoreCase("money")) {
             money = value;
         } if (id.equalsIgnoreCase("activeness")) {
