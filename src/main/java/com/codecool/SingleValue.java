@@ -4,7 +4,7 @@ public class SingleValue {
 
     String param;
 
-    public SingleValue(String param) {
-        this.param = param;
-    }
+   /* public SingleValue(String param) {
+        this.param = param;*
+    }*/
 }

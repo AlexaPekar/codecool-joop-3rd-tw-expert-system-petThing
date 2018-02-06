@@ -10,7 +10,7 @@ public class RuleRepository {
 
     }
 
-    public Iterator<Question> getIterator() {
+    /*public Iterator<Question> getIterator() {
 
-    }
+    }*/
 }

@@ -12,12 +12,15 @@ import java.util.HashMap;
 
 public class FactParser {
 
+    FactRepository fRepo;
+
     public FactParser() {
 
     }
 
-    public FactRepository getFactRepository(){
-        return null;
+
+    public FactRepository getFactRepository(FactRepository fRepo){
+        return fRepo;
     }
 
     public HashMap<String,HashMap<String,Boolean>> factsFromXML = new HashMap<>();
@@ -40,6 +43,7 @@ public class FactParser {
                 if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                     Element eElement = (Element) nNode;
                     factsFromXML.put(eElement.getAttribute("id"),new HashMap<String,Boolean>());
+
 
                     for(int i=0;i<eElement.getElementsByTagName("Eval").getLength();i++){
                         factsFromXML.get(eElement.getAttribute("id")).put(eElement.getElementsByTagName("Eval").item(i).getAttributes().item(0).getTextContent(),Boolean.getBoolean(eElement.getElementsByTagName("Eval").item(i).getTextContent()));
