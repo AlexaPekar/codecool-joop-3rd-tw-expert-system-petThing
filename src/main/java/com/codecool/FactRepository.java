@@ -6,9 +6,10 @@ import java.util.List;
 public class FactRepository {
 
     private List<Fact> facts;
-    private Iterator<Fact> fact;
+    private Iterator<Fact> factIter;
 
-    public FactRepository() {
+    public FactRepository(FactIterator factIter) {
+        this.factIter=factIter;
     }
 
     public void addFact(Fact fact) {
@@ -16,6 +17,6 @@ public class FactRepository {
     }
 
     public Iterator<Fact> getIterator() {
-        return fact;
+        return factIter;
     }
 }
