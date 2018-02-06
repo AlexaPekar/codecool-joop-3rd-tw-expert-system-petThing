@@ -2,7 +2,9 @@ package com.codecool;
 
 public class SingleValue {
 
-    public SingleValue(String param) {
+    String param;
 
+    public SingleValue(String param) {
+        this.param = param;
     }
 }
