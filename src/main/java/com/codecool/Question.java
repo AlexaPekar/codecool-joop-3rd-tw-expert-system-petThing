@@ -8,7 +8,9 @@ public class Question {
 
 
     public Question(String id, String question, Answer answer) {
-
+        this.id=id;
+        this.question=question;
+        this.answer=answer;
     }
 
     public String getId() {
@@ -23,7 +25,7 @@ public class Question {
         return answer;
     }
 
-    public boolean getEvalutedAnswer(String input) {
-        return false;
+    public boolean getEvalutedAnswer(String input) throws Exception {
+        return answer.evaluateAnswerByInput(input);
     }
 }
