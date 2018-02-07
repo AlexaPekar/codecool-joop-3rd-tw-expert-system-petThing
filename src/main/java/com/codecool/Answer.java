@@ -2,6 +2,7 @@ package com.codecool;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class Answer {
 
@@ -12,14 +13,14 @@ public class Answer {
     public Answer() {
     }
 
-    public boolean evaluateAnswerByInput(String input) throws Exception {
-        boolean result = false;
+    public boolean evaluateAnswerByInput(String input) {
         for (int i = 0; i < values.size(); i++) {
             if (values.get(i).getParam().equals(input)) {
-                result = true;
+                return values.get(i).getSelectionType();
             }
         }
-        return result;
+        throw new NoSuchElementException();
+
     }
 
     public void addValue(Value value) {
