@@ -14,8 +14,6 @@ import java.io.IOException;
 
 public abstract class XMLParser {
 
-    Element eElement;
-
     NodeList nList;
 
     public void loadXmlDocument(String xmlPath, String type) {
@@ -29,11 +27,7 @@ public abstract class XMLParser {
 
              nList = doc.getElementsByTagName(type);
 
-        } catch (ParserConfigurationException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (SAXException e) {
+        } catch (ParserConfigurationException | IOException | SAXException e) {
             e.printStackTrace();
         }
     }
