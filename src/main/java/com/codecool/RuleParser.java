@@ -28,15 +28,13 @@ public class RuleParser extends XMLParser {
                 rRepo.addQuestion(new Question(eElement.getAttribute("id"), eElement.getElementsByTagName("Question").item(0).getTextContent(), new Answer()));
 
                 for (int i = 0; i < eElement.getElementsByTagName("SingleValue").getLength(); i++) {
-                    rRepo.getQuestions().get(temp).getAnswer().addValue(new SingleValue(eElement.getElementsByTagName("SingleValue").item(i).getAttributes().item(0).getTextContent(), Boolean.valueOf(eElement.getElementsByTagName("SingleValue").item(i).getParentNode().getAttributes().item(0).getTextContent())));
-                    
+
+                    String param = eElement.getElementsByTagName("SingleValue").item(i).getAttributes().item(0).getTextContent();
+                    Boolean selectionType = Boolean.valueOf(eElement.getElementsByTagName("SingleValue").item(i).getParentNode().getAttributes().item(0).getTextContent());
+
+                    rRepo.getQuestions().get(temp).getAnswer().addValue(new SingleValue(param, selectionType));
+
                 }
-
-                //fRepo.addFact(new Fact(eElement.getAttribute("id"), eElement.getElementsByTagName("Description").item(0).getAttributes().item(0).getTextContent()));
-
-                //for (int i = 0; i < eElement.getElementsByTagName("Eval").getLength(); i++) {
-                //fRepo.getFacts().get(temp).setFactValueById(eElement.getElementsByTagName("Eval").item(i).getAttributes().item(0).getTextContent(), Boolean.valueOf(eElement.getElementsByTagName("Eval").item(i).getTextContent()));
-
             }
         }
     }
