@@ -5,6 +5,10 @@ import java.util.List;
 
 public class MultipleValue extends Value{
 
+    public String getParam() {
+        return null;
+    }
+
     private List<String> params = new ArrayList<>();
     boolean selectionType;
 

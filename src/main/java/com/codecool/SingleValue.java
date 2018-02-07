@@ -19,4 +19,8 @@ public class SingleValue extends Value{
     public List<String> getInputPattern() {
         return null;
     }
+
+    public String getParam() {
+       return param;
+    }
 }
