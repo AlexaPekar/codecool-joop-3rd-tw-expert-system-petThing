@@ -16,11 +16,11 @@ public class FactParser extends XMLParser {
 
 
     public FactParser(FactRepository fRepo) {
-        this.fRepo = getFactRepository();
+        this.fRepo = getFactRepository(fRepo);
     }
 
 
-    public FactRepository getFactRepository() {
+    public FactRepository getFactRepository(FactRepository fRepo) {
         return fRepo;
     }
 
