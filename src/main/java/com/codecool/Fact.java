@@ -7,7 +7,7 @@ public class Fact {
     private String id;
     private String description;
     private Set<String> idSet;
-    private boolean livingSpace;
+    public boolean livingSpace;
     private boolean freeTime;
     private boolean money;
     private boolean activeness;

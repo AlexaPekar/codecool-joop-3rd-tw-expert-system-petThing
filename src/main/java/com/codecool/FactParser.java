@@ -14,8 +14,9 @@ public class FactParser {
 
     FactRepository fRepo;
 
-    public FactParser() {
 
+    public FactParser(FactRepository fRepo) {
+        this.fRepo = getFactRepository(fRepo);
     }
 
 
@@ -42,13 +43,16 @@ public class FactParser {
 
                 if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                     Element eElement = (Element) nNode;
-                    factsFromXML.put(eElement.getAttribute("id"),new HashMap<String,Boolean>());
+                    //factsFromXML.put(eElement.getAttribute("id"),new HashMap<String,Boolean>());
+                    fRepo.addFact(new Fact(eElement.getAttribute("id"),eElement.getElementsByTagName("Description").item(0).getAttributes().item(0).getTextContent()));
 
 
                     for(int i=0;i<eElement.getElementsByTagName("Eval").getLength();i++){
-                        factsFromXML.get(eElement.getAttribute("id")).put(eElement.getElementsByTagName("Eval").item(i).getAttributes().item(0).getTextContent(),Boolean.getBoolean(eElement.getElementsByTagName("Eval").item(i).getTextContent()));
+                       fRepo.getFacts().get(temp).setFactValueById(eElement.getElementsByTagName("Eval").item(i).getAttributes().item(0).getTextContent(),Boolean.valueOf(eElement.getElementsByTagName("Eval").item(i).getTextContent()));
 
                     }
+
+
 
 
 
