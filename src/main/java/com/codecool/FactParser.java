@@ -10,7 +10,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.util.HashMap;
 
-public class FactParser {
+public class FactParser extends XMLParser {
 
     FactRepository fRepo;
 
@@ -20,50 +20,30 @@ public class FactParser {
     }
 
 
-    public FactRepository getFactRepository(FactRepository fRepo){
+    public FactRepository getFactRepository(FactRepository fRepo) {
         return fRepo;
     }
 
-    public HashMap<String,HashMap<String,Boolean>> factsFromXML = new HashMap<>();
 
+    public void load(String filename) {
 
-    public void load(String filename){
+        loadXmlDocument(filename, "Fact");
 
-        try {
+        for (int temp = 0; temp < nList.getLength(); temp++) {
+            Node nNode = nList.item(temp);
 
-            File fXmlFile = new File(filename);
-            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-            Document doc = dBuilder.parse(fXmlFile);
-            doc.getDocumentElement().normalize();
-
-            NodeList nList = doc.getElementsByTagName("Fact");
-            for (int temp = 0; temp < nList.getLength(); temp++) {
-                Node nNode = nList.item(temp);
-
-                if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-                    Element eElement = (Element) nNode;
-                    //factsFromXML.put(eElement.getAttribute("id"),new HashMap<String,Boolean>());
-                    fRepo.addFact(new Fact(eElement.getAttribute("id"),eElement.getElementsByTagName("Description").item(0).getAttributes().item(0).getTextContent()));
-
-
-                    for(int i=0;i<eElement.getElementsByTagName("Eval").getLength();i++){
-                       fRepo.getFacts().get(temp).setFactValueById(eElement.getElementsByTagName("Eval").item(i).getAttributes().item(0).getTextContent(),Boolean.valueOf(eElement.getElementsByTagName("Eval").item(i).getTextContent()));
-
-                    }
-
-
-
-
-
-
-
-                }
+            if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+                eElement = (Element) nNode;
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+
+            //factsFromXML.put(eElement.getAttribute("id"),new HashMap<String,Boolean>());
+            fRepo.addFact(new Fact(eElement.getAttribute("id"), eElement.getElementsByTagName("Description").item(0).getAttributes().item(0).getTextContent()));
+
+
+            for (int i = 0; i < eElement.getElementsByTagName("Eval").getLength(); i++) {
+                fRepo.getFacts().get(temp).setFactValueById(eElement.getElementsByTagName("Eval").item(i).getAttributes().item(0).getTextContent(), Boolean.valueOf(eElement.getElementsByTagName("Eval").item(i).getTextContent()));
+
+            }
         }
-
-
     }
 }
