@@ -19,10 +19,17 @@ public class ESProvider {
 
         while (ruleParser.rRepo.getIterator().hasNext()) {
             Question q = ruleParser.rRepo.getIterator().next();
-            System.out.println(q.getQuestion());
-            String usrInput = new Scanner(System.in).next();
-            boolean tempValue = q.getEvalutedAnswer(usrInput);
-            map.put(q.getId(), tempValue);
+            while (true) {
+                try {
+                    System.out.println(q.getQuestion());
+                    String usrInput = new Scanner(System.in).next();
+                    boolean tempValue = q.getEvalutedAnswer(usrInput);
+                    map.put(q.getId(), tempValue);
+                    break;
+                } catch (NoSuchElementException e) {
+                    System.out.println("Wrong input");
+                }
+            }
         }
     }
 
