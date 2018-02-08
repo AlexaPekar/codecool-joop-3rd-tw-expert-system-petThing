@@ -1,5 +1,7 @@
 package com.codecool;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 public class Fact {
@@ -8,7 +10,7 @@ public class Fact {
     private String description;
     private Set<String> idSet;
     public boolean livingSpace;
-    private boolean freeTime;
+    public boolean freeTime;
     private boolean money;
     private boolean activeness;
     private boolean cleaning;
@@ -23,19 +25,17 @@ public class Fact {
     }
 
     public boolean getValueById(String id) {
-        if (id.equalsIgnoreCase("livingSpace")) {
-            return livingSpace;
-        } if (id.equalsIgnoreCase("freeTime")) {
-            return freeTime;
-        } if (id.equalsIgnoreCase("money")) {
-            return money;
-        } if (id.equalsIgnoreCase("activeness")) {
-            return activeness;
-        } if (id.equalsIgnoreCase("cleaning")) {
-            return cleaning;
+        String tempVariable;
+        List<String> idList = new ArrayList<>(idSet);
+        for (int i = 0; i < idList.size(); i++) {
+            tempVariable = idList.get(i);
+            if (id.equalsIgnoreCase(tempVariable)) {
+                return Boolean.parseBoolean(tempVariable);
+            }
         }
         return Boolean.parseBoolean(null);
     }
+
 
     public void setFactValueById(String id, boolean value) {
         if (id.equalsIgnoreCase("livingSpace")) {
