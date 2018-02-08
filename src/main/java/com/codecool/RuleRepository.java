@@ -33,7 +33,7 @@ public class RuleRepository {
 
         @Override
         public boolean hasNext() {
-            if (counter + 1 == questions.size()) {
+            if (counter >= questions.size()) {
                 return false;
             } else {
                 return true;
