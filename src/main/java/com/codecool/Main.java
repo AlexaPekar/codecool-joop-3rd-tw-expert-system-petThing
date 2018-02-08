@@ -1,19 +1,24 @@
 package com.codecool;
 
+import javafx.css.Rule;
+
 import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
-        FactIterator fIter = new FactIterator();
-        FactRepository fRepo = new FactRepository(fIter);
+        FactRepository fRepo = new FactRepository();
         FactParser fParser = new FactParser(fRepo);
+        RuleRepository rRepo = new RuleRepository();
+        RuleParser rParser = new RuleParser(rRepo);
         fParser.load("data/facts.xml");
+        rParser.load("data/rules.xml");
+        System.out.println(rRepo.getQuestions().get(2).getQuestion());
+        ESProvider esp = new ESProvider(fParser, rParser);
 
-        System.out.println(fRepo.getFacts().get(0).livingSpace);
-        System.out.println(fRepo.getFacts().get(1).livingSpace);
-        System.out.println(fRepo.getFacts().get(2).livingSpace);
-        System.out.println(fRepo.getFacts().get(3).livingSpace);
-        System.out.println(fRepo.getFacts().get(4).livingSpace);
+        esp.collectAnswers();
+        System.out.println(esp.evaluate());
+
+
 
 
     }

@@ -1,20 +1,52 @@
 package com.codecool;
 
+import java.util.*;
+
 public class ESProvider {
 
-    public ESProvider(FactParser factParser, RuleParser ruleParser) {
+    Map<String, Boolean> map = new HashMap<>();
+    TreeMap<Integer, String> matches = new TreeMap<>();
+    FactParser factParser;
+    RuleParser ruleParser;
+    boolean temp;
 
+    public ESProvider(FactParser factParser, RuleParser ruleParser) {
+        this.factParser = factParser;
+        this.ruleParser = ruleParser;
     }
 
     public void collectAnswers() {
 
+        while (ruleParser.rRepo.getIterator().hasNext()) {
+            Question q = ruleParser.rRepo.getIterator().next();
+            System.out.println(q.getQuestion());
+            String usrInput = new Scanner(System.in).next();
+            boolean tempValue = q.getEvalutedAnswer(usrInput);
+            map.put(q.getId(), tempValue);
+        }
     }
 
     public boolean getAnswerByQuestion(String questionId) {
-        return false;
+        for (String key : map.keySet()) {
+            if (key.equals(questionId)) {
+                temp = map.get(key);
+            }
+        }
+        return temp;
     }
 
     public String evaluate() {
-        return null;
+        while (factParser.fRepo.getIterator().hasNext()) {
+            int counter = 0;
+            Fact f = factParser.fRepo.getIterator().next();
+            for (String s: f.getIdSet()) {
+                if (getAnswerByQuestion(s) == f.getValueById(s)) {
+                    counter++;
+                }
+            }
+            matches.put(counter, f.getDescription());
+        }
+        System.out.println(matches.lastKey());
+        return matches.get(matches.lastKey());
     }
 }

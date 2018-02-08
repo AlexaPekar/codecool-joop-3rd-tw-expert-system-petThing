@@ -25,7 +25,7 @@ public class Question {
         return answer;
     }
 
-    public boolean getEvalutedAnswer(String input) throws Exception {
+    public boolean getEvalutedAnswer(String input) {
         return answer.evaluateAnswerByInput(input);
     }
 }

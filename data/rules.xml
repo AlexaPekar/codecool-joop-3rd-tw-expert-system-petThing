@@ -13,7 +13,7 @@
     </Rule>
 
     <Rule id="freetime">
-        <Question>Do you have a lot of freetime?(yes/no)</Question>
+        <Question>Do you have a lot of free time?(yes/no)</Question>
         <Answer>
             <Selection value="true">
                 <SingleValue value="yes"/>
@@ -25,13 +25,13 @@
     </Rule>
 
     <Rule id="money">
-        <Question>Does the cost of the animal matters?(yes/no)</Question>
+        <Question>Does the cost of the animal matters to you?(yes/no)</Question>
         <Answer>
             <Selection value="true">
-                <MultipleValue value="yes"/>
+                <SingleValue value="yes"/>
             </Selection>
             <Selection value="false">
-                <MultipleValue value="no"/>
+                <SingleValue value="no"/>
             </Selection>
         </Answer>
     </Rule>
@@ -40,22 +40,22 @@
         <Question>Do you live an active life?(yes/no)</Question>
         <Answer>
             <Selection value="true">
-                <MultipleValue value="yes"/>
+                <SingleValue value="yes"/>
             </Selection>
             <Selection value="false">
-                <MultipleValue value="no"/>
+                <SingleValue value="no"/>
             </Selection>
         </Answer>
     </Rule>
 
-        <Rule id="cleaning">
+    <Rule id="cleaning">
         <Question>Do you like cleaning?(yes/no)</Question>
         <Answer>
             <Selection value="true">
-                <MultipleValue value="yes"/>
+                <SingleValue value="yes"/>
             </Selection>
             <Selection value="false">
-                <MultipleValue value="no"/>
+                <SingleValue value="no"/>
             </Selection>
         </Answer>
     </Rule>
