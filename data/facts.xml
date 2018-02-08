@@ -8,7 +8,6 @@
             <Eval id="money">false</Eval>
             <Eval id="activeness">true</Eval>
             <Eval id="cleaning">true</Eval>
-            <Eval id="prince">false</Eval>
         </Evals>
     </Fact>
 
@@ -20,7 +19,6 @@
             <Eval id="money">true</Eval>
             <Eval id="activeness">false</Eval>
             <Eval id="cleaning">true</Eval>
-            <Eval id="prince">false</Eval>
         </Evals>
     </Fact>
 
@@ -32,7 +30,6 @@
             <Eval id="money">true</Eval>
             <Eval id="activeness">false</Eval>
             <Eval id="cleaning">false</Eval>
-            <Eval id="prince">false</Eval>
         </Evals>
     </Fact>
 
@@ -44,7 +41,6 @@
             <Eval id="money">false</Eval>
             <Eval id="activeness">true</Eval>
             <Eval id="cleaning">false</Eval>
-            <Eval id="prince">false</Eval>
         </Evals>
     </Fact>
 
@@ -56,7 +52,6 @@
             <Eval id="money">false</Eval>
             <Eval id="activeness">false</Eval>
             <Eval id="cleaning">true</Eval>
-            <Eval id="prince">false</Eval>
         </Evals>
     </Fact>
 
@@ -68,7 +63,6 @@
             <Eval id="money">false</Eval>
             <Eval id="activeness">true</Eval>
             <Eval id="cleaning">false</Eval>
-            <Eval id="prince">false</Eval>
         </Evals>
     </Fact>
 
@@ -80,7 +74,6 @@
             <Eval id="money">true</Eval>
             <Eval id="activeness">false</Eval>
             <Eval id="cleaning">false</Eval>
-            <Eval id="prince">false</Eval>
         </Evals>
     </Fact>
 
@@ -92,7 +85,6 @@
             <Eval id="money">true</Eval>
             <Eval id="activeness">true</Eval>
             <Eval id="cleaning">true</Eval>
-            <Eval id="prince">false</Eval>
         </Evals>
     </Fact>
 
@@ -104,7 +96,6 @@
             <Eval id="money">true</Eval>
             <Eval id="activeness">true</Eval>
             <Eval id="cleaning">true</Eval>
-            <Eval id="prince">false</Eval>
         </Evals>
     </Fact>
 
@@ -116,7 +107,6 @@
                 <Eval id="money">false</Eval>
                 <Eval id="activeness">true</Eval>
                 <Eval id="cleaning">false</Eval>
-                <Eval id="prince">true</Eval>
             </Evals>
         </Fact>
 </Facts>

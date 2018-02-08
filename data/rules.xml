@@ -60,15 +60,4 @@
         </Answer>
     </Rule>
 
-        <Rule id="prince">
-            <Question>Are you a Saudi prince?(yes/no)</Question>
-            <Answer>
-                <Selection value="true">
-                    <SingleValue value="yes"/>
-                </Selection>
-                <Selection value="false">
-                    <SingleValue value="no"/>
-                </Selection>
-            </Answer>
-        </Rule>
 </Rules>
