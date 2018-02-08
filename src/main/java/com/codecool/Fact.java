@@ -16,8 +16,8 @@ public class Fact {
 
     public Set<String> getIdSet() {
         Set<String> result = new HashSet<>();
-        for (String id : idSet.keySet()) {
-            result.add(id);
+        for (String key : idSet.keySet()) {
+            result.add(key);
         }
         return result;
     }
