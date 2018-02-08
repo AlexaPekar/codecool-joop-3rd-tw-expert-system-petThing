@@ -8,10 +8,10 @@ public class RuleParser extends XMLParser {
     RuleRepository rRepo;
 
     public RuleParser(RuleRepository rRepo) {
-        this.rRepo = getRuleRepository(rRepo);
+        this.rRepo = rRepo;
     }
 
-    public RuleRepository getRuleRepository(RuleRepository rRepo) {
+    public RuleRepository getRuleRepository() {
         return rRepo;
     }
 

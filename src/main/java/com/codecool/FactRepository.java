@@ -12,7 +12,7 @@ public class FactRepository {
     private Iterator<Fact> factIter;
 
     public FactRepository() {
-        this.factIter= new FactIterator(facts);
+        this.factIter = new FactIterator(facts);
     }
 
     public void addFact(Fact fact) {
@@ -60,6 +60,3 @@ public class FactRepository {
         }
     }
 }
-
-
-

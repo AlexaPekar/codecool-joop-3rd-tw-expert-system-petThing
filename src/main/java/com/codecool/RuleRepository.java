@@ -11,7 +11,7 @@ public class RuleRepository {
     private Iterator<Question> questionIter;
 
     public RuleRepository() {
-        this.questionIter = new QuestionIterator();
+        this.questionIter = new QuestionIterator(questions);
     }
 
     public void addQuestion(Question question) {
@@ -27,9 +27,15 @@ public class RuleRepository {
     }
 
 
-    class QuestionIterator implements Iterator<Question> {
+    static class QuestionIterator implements Iterator<Question> {
 
+        public QuestionIterator(List<Question> questions) {
+            this.questions = questions;
+        }
+
+        List<Question> questions;
         int counter = 0;
+
 
         @Override
         public boolean hasNext() {
