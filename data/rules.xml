@@ -59,4 +59,16 @@
             </Selection>
         </Answer>
     </Rule>
+
+        <Rule id="prince">
+            <Question>Are you a Saudi prince?(yes/no)</Question>
+            <Answer>
+                <Selection value="true">
+                    <MultipleValue value="yes"/>
+                </Selection>
+                <Selection value="false">
+                    <MultipleValue value="no"/>
+                </Selection>
+            </Answer>
+        </Rule>
 </Rules>
