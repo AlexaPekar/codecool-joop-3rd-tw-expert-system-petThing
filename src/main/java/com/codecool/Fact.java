@@ -1,19 +1,13 @@
 package com.codecool;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Fact {
     
     private String id;
     private String description;
-    private Set<String> idSet;
-    public boolean livingSpace;
-    public boolean freeTime;
-    private boolean money;
-    private boolean activeness;
-    private boolean cleaning;
+    private HashMap<String, Boolean> idSet = new HashMap<>();
+    private boolean temp;
 
     public Fact(String id, String description) {
         this.id = id;
@@ -21,34 +15,24 @@ public class Fact {
     }
 
     public Set<String> getIdSet() {
-        return idSet;
+        Set<String> result = new HashSet<>();
+        for (String id : idSet.keySet()) {
+            result.add(id);
+        }
+        return result;
     }
 
     public boolean getValueById(String id) {
-        String tempVariable;
-        List<String> idList = new ArrayList<>(idSet);
-        for (int i = 0; i < idList.size(); i++) {
-            tempVariable = idList.get(i);
-            if (id.equalsIgnoreCase(tempVariable)) {
-                return Boolean.parseBoolean(tempVariable);
+        for (String key : idSet.keySet()) {
+            if (key.equals(id)) {
+                temp = idSet.get(key);
             }
         }
-        return Boolean.parseBoolean(null);
+        return temp;
     }
 
-
     public void setFactValueById(String id, boolean value) {
-        if (id.equalsIgnoreCase("livingSpace")) {
-            livingSpace = value;
-        } if (id.equalsIgnoreCase("freeTime")) {
-            freeTime = value;
-        } if (id.equalsIgnoreCase("money")) {
-            money = value;
-        } if (id.equalsIgnoreCase("activeness")) {
-            activeness = value;
-        } if (id.equalsIgnoreCase("cleaning")) {
-            cleaning = value;
-        }
+        idSet.put(id, value);
     }
 
     public String getDescription() {
