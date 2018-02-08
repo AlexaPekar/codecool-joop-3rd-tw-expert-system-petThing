@@ -12,7 +12,7 @@
         </Answer>
     </Rule>
 
-    <Rule id="freetime">
+    <Rule id="freeTime">
         <Question>Do you have a lot of free time?(yes/no)</Question>
         <Answer>
             <Selection value="true">
