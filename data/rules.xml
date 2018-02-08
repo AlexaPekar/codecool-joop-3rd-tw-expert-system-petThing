@@ -64,10 +64,10 @@
             <Question>Are you a Saudi prince?(yes/no)</Question>
             <Answer>
                 <Selection value="true">
-                    <MultipleValue value="yes"/>
+                    <SingleValue value="yes"/>
                 </Selection>
                 <Selection value="false">
-                    <MultipleValue value="no"/>
+                    <SingleValue value="no"/>
                 </Selection>
             </Answer>
         </Rule>

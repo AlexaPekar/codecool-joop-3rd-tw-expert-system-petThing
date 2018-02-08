@@ -108,12 +108,12 @@
         </Evals>
     </Fact>
 
-        <Fact id="t-rex">
-            <Description value="Tyrannosaurus Rex (you can get one from John Hammond, call 555-45363-2233"/>
+        <Fact id="trex">
+            <Description value="Tyrannosaurus Rex (you can get one from John Hammond, call 555-45363-2233)"/>
             <Evals>
                 <Eval id="livingSpace">true</Eval>
                 <Eval id="freeTime">true</Eval>
-                <Eval id="money">true</Eval>
+                <Eval id="money">false</Eval>
                 <Eval id="activeness">true</Eval>
                 <Eval id="cleaning">false</Eval>
                 <Eval id="prince">true</Eval>
