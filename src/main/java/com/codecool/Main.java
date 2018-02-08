@@ -12,7 +12,6 @@ public class Main {
         RuleParser rParser = new RuleParser(rRepo);
         fParser.load("data/facts.xml");
         rParser.load("data/rules.xml");
-        System.out.println(rRepo.getQuestions().get(2).getQuestion());
         ESProvider esp = new ESProvider(fParser, rParser);
 
         esp.collectAnswers();
