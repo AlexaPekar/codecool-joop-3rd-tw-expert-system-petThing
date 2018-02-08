@@ -4,7 +4,6 @@ package com.codecool;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -35,9 +34,7 @@ class QuestionIteratorTest {
 
     @Test
     void next() {
-        assertThrows(NoSuchElementException.class, ()-> {
-            rRepo.getIterator().next();
-        });
+        assertThrows(NoSuchElementException.class, ()-> rRepo.getIterator().next());
         testQuestions.add(testQuest);
         testQuestions.add(secondTestQuest);
         assertEquals(testQuest, rRepo.getIterator().next());

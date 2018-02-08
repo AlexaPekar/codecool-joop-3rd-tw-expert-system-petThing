@@ -14,9 +14,9 @@ public class Answer {
     }
 
     public boolean evaluateAnswerByInput(String input) {
-        for (int i = 0; i < values.size(); i++) {
-            if (values.get(i).getParam().equals(input)) {
-                return values.get(i).getSelectionType();
+        for (Value value1 : values) {
+            if (value1.getParam().equals(input)) {
+                return value1.getSelectionType();
             }
         }
         throw new NoSuchElementException();

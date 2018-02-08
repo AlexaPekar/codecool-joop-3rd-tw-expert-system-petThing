@@ -33,10 +33,6 @@ class RuleRepositoryTest {
         assertEquals(true, testRuleRepo.getQuestions().contains(secondTestQuest));
     }
 
-    @Test
-    void getIterator() {
-        //assertEquals(QuestionIterator.class, testRuleRepo.getIterator().getClass());
-    }
 
     @Test
     void getQuestions() {

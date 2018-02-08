@@ -19,9 +19,7 @@ class AnswerTest {
     void evaluateAnswerByInput() {
         assertEquals(true, testAnsi.evaluateAnswerByInput("house"));
         assertEquals(false, testAnsi.evaluateAnswerByInput("flat"));
-        assertThrows(NoSuchElementException.class, ()-> {
-            testAnsi.evaluateAnswerByInput("bungalow");
-        });
+        assertThrows(NoSuchElementException.class, ()-> testAnsi.evaluateAnswerByInput("bungalow"));
     }
 
     @org.junit.jupiter.api.Test

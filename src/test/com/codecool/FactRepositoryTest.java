@@ -27,10 +27,6 @@ class FactRepositoryTest {
         assertEquals(true, testFactRepo.getFacts().contains(secondTestFact));
     }
 
-    @Test
-    void getIterator() {
-        //assertEquals(FactIterator.class, testFactRepo.getIterator().getClass());
-    }
 
     @Test
     void getFacts() {

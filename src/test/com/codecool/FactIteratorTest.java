@@ -34,9 +34,7 @@ class FactIteratorTest {
 
     @Test
     void next() {
-        assertThrows(NoSuchElementException.class, ()-> {
-            factIter.next();
-        });
+        assertThrows(NoSuchElementException.class, ()-> factIter.next());
         testFacts.add(testFact);
         testFacts.add(secondTestFact);
         assertEquals(testFact, factIter.next());
